@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Privacy-first conversion</span>
+      <h1>Convert Office files to PDF in seconds.</h1>
+      <p>No login. No tracking. No file storage. Just clean, secure conversion for your documents.</p>
+      <ul class="feature-list">
+        <li>DOCX, DOC, PPTX, PPT, XLSX, XLS</li>
+        <li>Fast browser upload and PDF download</li>
+        <li>Works for business, students, and offices</li>
+      </ul>
+    </div>
+
+    <div class="upload-panel">
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-icon">⬆</div>
+        <h3>Upload file</h3>
+        <p>Drag and drop or click to choose a file</p>
+        <input id="fileInput" type="file" accept=".doc,.docx,.ppt,.pptx,.xls,.xlsx" hidden>
+        <button class="button primary" id="selectFileBtn">Choose file</button>
+      </div>
+
+      <div class="status-box hidden" id="statusBox">
+        <div class="spinner"></div>
+        <span id="statusText">Processing file...</span>
+      </div>
+
+      <div class="ads-box">
+        <span>Advertisement</span>
+        <div class="ad-placeholder">Google AdSense space</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container supported-formats">
+  <div class="section-head">
+    <h2>Supported formats</h2>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>Word</h3><p>DOC / DOCX → PDF</p></div>
+    <div class="card"><h3>PowerPoint</h3><p>PPT / PPTX → PDF</p></div>
+    <div class="card"><h3>Excel</h3><p>XLS / XLSX → PDF</p></div>
+  </div>
+</section>
+
+<section class="container reason-grid">
+  <div class="reason-box">
+    <h3>Privacy by design</h3>
+    <p>Your uploaded file is only used to create a PDF and then removed automatically.</p>
+  </div>
+  <div class="reason-box">
+    <h3>Fast conversion</h3>
+    <p>Prepared for quick document workflows without login or registration.</p>
+  </div>
+  <div class="reason-box">
+    <h3>Public-ready</h3>
+    <p>Built for easy SEO, public sharing, and reliable long-term usage.</p>
+  </div>
+</section>
+
+<section class="container seo-block">
+  <h2>Convert documents to PDF safely</h2>
+  <p>SecureConvert is designed for people who need to convert Microsoft Office files into PDF quickly and securely. You can upload a Word, Excel, or PowerPoint document and get a clean PDF without creating an account.</p>
+</section>
+{% endblock %}

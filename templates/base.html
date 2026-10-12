@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page_description or 'Convert DOCX, PPTX, and XLSX files to PDF safely and privately.' }}">
+    <title>{{ page_title or 'SecureConvert' }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a class="brand" href="/">
+          <span class="brand-mark">SC</span>
+          <span>SecureConvert</span>
+        </a>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/docx-to-pdf">DOCX to PDF</a>
+          <a href="/pptx-to-pdf">PPTX to PDF</a>
+          <a href="/xlsx-to-pdf">XLSX to PDF</a>
+          <a href="/about">About</a>
+          <a href="/privacy">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <h4>SecureConvert</h4>
+          <p>Privacy-first document conversion for Europe.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/about">About</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
+          <a href="/faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
